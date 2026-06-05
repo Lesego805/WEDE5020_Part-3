@@ -1,0 +1,6 @@
+# Instruct all search engine crawlers to index our bakery website
+User-agent: *
+Allow: /
+
+# Link directly to our sitemap file to speed up indexing discovery
+Sitemap: https://yourdomain.netlify.app/sitemap.xml

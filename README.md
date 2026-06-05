@@ -1,27 +1,29 @@
-# The Golden Crust - Web Development Project
+# The Golden Crust Bakery Website
+**Course:** WEDE5020 - Web Development
+**Name:** [Lesego Mashego]
+**Student Number:** [ST10499067]
 
-Welcome to the repository for **The Golden Crust** website. This project forms part of an ongoing web development assessment focused on semantically structured layout design, responsive styling, interactive scripting, and optimization.
+## Project Overview
+This project is a 5-page responsive website created for a bakery called **The Golden Crust**. It showcases artisanal bread, business locations, and provides a contact method for customers.
 
----
+## Pages Included
+* **Home (`index.html`):** The landing page with a welcoming message.
+* **About Us (`about.html`):** Background on the bakery's history.
+* **Products (`products.html`):** A visual grid of daily bakes with prices.
+* **Enquiry (`enquiry.html`):** A form for customer questions.
+* **Contact (`contact.html`):** Store locations in Pretoria and Johannesburg.
 
-## Part 3 Changelog
+## Design & Features
+* **Background Video:** Implemented on the Contact page for a modern, high-quality look.
+* **CSS Flexbox:** Used to create a consistent, centered layout for the product grid.
+* **Styling:** Follows a "Rustic/Bakery" theme using beige and deep brown tones.
+* **Version Control:** Managed entirely via Git Bash and GitHub.
 
-As required by the assessment criteria, this section acts as a comprehensive log detailing all structural corrections implemented from Part 2 feedback, alongside functional enhancements added during Part 3.
+## File Organization
+* `/root` (HTML files)
+* `/css` (Internal and External style sheets)
+* `/images` (All .png and .mp4 assets)
 
-### 1. Feedback Corrections (From Part 2 Evaluation)
-*   **[Date: 2026-06-03] Fixed Enquiry Page Layout Hierarchy:** Corrected the layout container where the "Get in Touch" heading text was pushed to the left side of the form container on wide desktop viewports. Added `flex-direction: column;` and `align-items: center;` to the `main` layout block in `style.css` to stack the heading contextually on top of the form box, matching the wireframe architecture verbatim.
-*   **[Date: 2026-06-03] Unified Global Navigation Bar:** Addressed layout discrepancies across the navigation elements. Consolidated duplicate navigation layout declarations inside `style.css` and applied a uniform structural rule utilizing horizontal Flexbox variables. This anchors navigation links inline to the top-right across all 5 production pages.
-*   **[Date: 2026-06-03] Standardized Color Palettes:** Replaced rogue beige hexadecimal tints with the official master brand palette asset codes (`#FDF5E6` cream backdrop base, `#3E2723` deep chocolate brown text, and `#B55D3A` terracotta accent).
-
-### 2. Feature Enhancements & Optimization (Part 3 Implementation)
-*   **[Date: Pending] Section 2.1 - Interactive Elements:** [e.g., Implemented a dynamic product category tab framework and integrated Leaflet Map API on the contact page for location tracking.]
-*   **[Date: Pending] Section 3.1 - On-Page SEO Integration:** [e.g., Formulated unique title tags and detailed descriptive meta tags for all 5 core HTML files. Structured heading tags logically from H1 downwards.]
-*   **[Date: Pending] Section 4.1 - Form Validation & AJAX:** [e.g., Configured client-side JavaScript regex patterns to check validation criteria on form textareas. Set up an asynchronous AJAX submission workflow to parse inputs without reloading.]
-
----
-
-## Project Setup & Deployment Info
-
-*   **Local Execution:** Open any `.html` entry file directly in a modern web browser, ensuring the resource directory mirrors standard conventions (`/css`, `/images`, `/js`).
-*   **Production Deployment URL:** [Paste your Netlify or GitHub Pages live link here]
-*   **Development Frameworks Utilized:** Vanilla HTML5, Advanced CSS3 Grid/Flexbox Systems, JavaScript (ES6+).
+## How to View
+1. Clone the repo.
+2. Open `index.html` in a web browser.# WEDE5020_The-GoldenCrust_Bakery

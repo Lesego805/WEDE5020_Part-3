@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Product & Catering Enquiries | The Golden Crust</title>
+    <meta name="description" content="Want to place a wholesale order or book a custom cake? Contact The Golden Crust team today for catering, custom baking, and volunteering enquiries.">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-cream-page">
+
+    <header class="enquiry-header">
+    <nav>
+        <div class="logo">Product Enquiry</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="Enquiry.html" class="active">Enquiry</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+    <main>
+        <div class="products-heading-container">
+            <h2>Get in Touch</h2>
+            <p>Have a question about our products or want to volunteer? Fill out the form below.</p>
+        </div>
+
+        <form id="enquiryForm" action="#">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required minlength="3" placeholder="John Doe">
+            <span class="error-msg" id="nameError"></span>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required placeholder="example@domain.com">
+            <span class="error-msg" id="emailError"></span>
+            
+            <label for="interest">Interested in:</label>
+            <select id="interest" name="interest">
+                <option value="wholesale">Wholesale Orders</option>
+                <option value="custom">Custom Cake/Pastry</option>
+                <option value="volunteer">Volunteering</option>
+                <option value="other">General Question</option>
+            </select>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="4" required minlength="10" placeholder="Type your enquiry here..."></textarea>
+            <span class="error-msg" id="messageError"></span>
+            
+            <button type="submit" id="submitBtn">Submit Enquiry</button>
+            <div id="formResponse"></div>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 The Golden Crust. All rights reserved.</p>
+    </footer>
+
+    <script src="js/validation.js"></script>
+</body>
+</html>
