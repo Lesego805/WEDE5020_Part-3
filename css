@@ -1,0 +1,612 @@
+/* 1. GLOBAL STYLES & TYPOGRAPHY */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', 'Aptos', sans-serif; /* Body font */
+    background-color: #FDF5E6; /* Cream background for ALL pages */
+    color: #3E2723; /* Brown text for ALL pages */
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Specific Background Logic for Home Page ONLY */
+body.home-page {
+    background-image: url('../images/background picture.png'); /* */
+    background-size: cover; /* */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* 2. HEADER & NAVIGATION (Flexbox Layout) */
+header {
+    background-color: rgba(253, 245, 230, 0.95); 
+    border-bottom: 2px solid #3E2723;
+    padding: 15px 5%;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+    /* =========================================
+   GLOBAL STYLES (Applies to all pages)
+   ========================================= */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', 'Aptos', sans-serif; /* Body font */
+    background-color: #FDF5E6; /* Cream background */
+    color: #3E2723; /* Brown text */
+}
+
+h1, h2, h3 {
+    font-family: 'Georgia', serif; /* Header font */
+}
+
+header {
+    background-color: #FDF5E6;
+    border-bottom: 1px solid #3E2723;
+    padding: 20px 5%;
+    
+    /* ADD THESE THREE LINES to split the title and nav bar */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+    /* ADD THIS LINE to make the links sit horizontally */
+    display: flex; 
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #3E2723;
+    font-weight: bold;
+}
+
+nav a.active {
+    color: #B55D3A; /* Brand accent color */
+}
+
+/* =========================================
+   ABOUT PAGE SPECIFIC STYLES
+   ========================================= */
+
+/* Hero Section with Fade Effect */
+.about-page .hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    /* Fades from brand Cream (#FDF5E6) to transparent to reveal the image */
+    background: linear-gradient(to right, 
+                #FDF5E6 35%, 
+                rgba(253, 245, 230, 0.8) 55%, 
+                transparent 100%), 
+                url('../images/about%20background%20picture.png');
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+    padding: 0 8%;
+}
+
+.about-page .hero-text {
+    max-width: 550px;
+    text-align: left; /* Text stays on the left solid-colored side */
+}
+
+.about-page h2 {
+    font-size: 4.5rem;
+    margin: 0;
+}
+
+.about-page .divider {
+    color: #B55D3A;
+    font-size: 1.8rem;
+    margin: 10px 0;
+}
+
+.about-page .tagline {
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.about-page h3 {
+    color: #B55D3A;
+    margin-top: 20px;
+}
+
+.about-page p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Values layout using Flexbox */
+.about-page .values-grid {
+    display: flex;
+    gap: 30px;
+    margin-top: 35px;
+}
+
+.about-page .value-item h4 {
+    margin: 0 0 5px 0;
+    font-size: 1rem;
+}
+
+.about-page .value-item p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #FDF5E6;
+    border-top: 1px solid #3E2723;
+}
+/* =========================================
+   PRODUCTS PAGE STYLES
+   ========================================= */
+
+/* 1. Background & Layout */
+body.products-page {
+    /* FIX: Added ../ to go out of 'css' folder and into 'images' folder */
+    background-image: linear-gradient(rgba(253, 245, 230, 0.8), rgba(253, 245, 230, 0.8)), 
+                      url('../images/product%20background%20picture.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #3e2723;
+    text-align: center;
+    min-height: 100vh;
+}
+
+/* 2. Header & Navigation */
+.products-page header {
+    background-color: rgba(253, 245, 230, 0.95); 
+    border-bottom: 2px solid #8d6e63;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.products-page header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-family: 'Georgia', serif;
+}
+
+.products-page nav ul {
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+    display: flex; 
+}
+
+.products-page nav ul li {
+    margin-left: 25px;
+}
+
+.products-page nav a {
+    text-decoration: none;
+    color: #3E2723;
+    font-weight: bold;
+}
+
+.products-page nav a:hover {
+    color: #B55D3A;
+}
+
+/* 3. Product Grid */
+.products-page main {
+    padding: 40px 20px;
+}
+
+.products-page .product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.products-page .product-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #8d6e63;
+    border-radius: 12px;
+    width: 220px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.products-page .product-card:hover {
+    transform: translateY(-10px);
+}
+
+.products-page .product-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.products-page .product-name {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-family: 'Georgia', serif;
+}
+
+.products-page .product-price {
+    color: #B55D3A;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.products-page footer {
+    padding: 20px;
+    background-color: rgba(253, 245, 230, 0.95);
+    border-top: 1px solid #8d6e63;
+    margin-top: auto;
+}
+/* ==========================================================================
+   ENQUIRY FORM COMPONENT BLOCKS
+   ========================================================================== */
+.bg-cream-page {
+    background-color: #FDF5E6 !important; /* Forces your brand cream backdrop */
+}
+
+form {
+    background-color: #EDE8D0; /* Filled tint box matching wireframes exactly */
+    padding: 30px;
+    border: 2px solid #C4BEA5;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto 0 auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+    font-size: 0.95rem;
+    text-align: left;
+    font-weight: bold;
+    color: #3E2723;
+}
+
+form input, 
+form select, 
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #A6A085;
+    border-radius: 4px;
+    background-color: #FFFFFF; /* High contrast inner inputs */
+    color: #3E2723;
+    font-family: Arial, sans-serif;
+}
+
+form button {
+    background-color: #8D6E63; /* Earthy brown button accent color */
+    color: #FFFFFF; /* Bold white typography contrast */
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 25px;
+    font-size: 1rem;
+    width: 100%;
+    transition: background-color 0.2s ease;
+}
+
+form button:hover {
+    background-color: #3E2723; /* Swaps cleanly to your primary dark brown */
+}
+h1, h2, h3 {
+    font-family: 'Georgia', serif; /* Heading font */
+    margin: 0;
+}
+
+nav ul {
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+    display: flex; 
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #3E2723;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #B55D3A; /* Brand accent color */
+}
+
+/* 3. CONTENT BOX STYLING */
+main {
+    flex: 1; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.content-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    width: 90%;
+    max-width: 650px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    border: 1px solid #3E2723;
+    box-sizing: border-box;
+}
+
+/* 4. IMAGES */
+.hero-image {
+    display: block;
+    margin: 20px auto;
+    border: 3px solid #3E2723;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* 5. FOOTER */
+footer {
+    background-color: rgba(253, 245, 230, 0.95);
+    padding: 20px 10px;
+    border-top: 2px solid #3E2723;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* 6. MOBILE OPTIMIZATION */
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav ul {
+        margin-top: 15px;
+    }
+    nav ul li {
+        margin: 5px 10px;
+    }
+}
+#formResponse p {
+    margin-top: 20px;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.success-box p {
+    background-color: #E2ECE9;
+    color: #2E5A44;
+    border: 1px solid #A3C1AD;
+}
+/* --- 1. HEADER & NAVIGATION (Keeps links on the top right) --- */
+.enquiry-header nav {
+    display: flex !important;
+    justify-content: space-between !important; /* Logo on left, links on top right */
+    align-items: center !important;
+    width: 100% !important;
+    padding: 15px 40px !important;
+    box-sizing: border-box !important;
+}
+
+.enquiry-header nav ul {
+    display: flex !important;
+    list-style-type: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: none !important; /* Clean space between links */
+}
+
+
+/* --- 2. MAIN CONTENT AREA (Moves heading to top center) --- */
+main {
+    display: flex !important;
+    flex-direction: column !important; /* Stacks heading on top, form on bottom */
+    align-items: center !important;    /* Centers both elements horizontally */
+    justify-content: flex-start !important;
+    padding: 50px 20px !important;     /* Adds breathing room below the nav bar */
+    min-height: 65vh !important;
+}
+
+/* Centers the text block perfectly above the form card */
+main .products-heading-container {
+    text-align: center !important;     /* Centers the text characters */
+    margin-bottom: 30px !important;    /* Spacing between text and form */
+    width: 100% !important;
+    max-width: 600px !important;
+}
+
+/* Keeps your form layout exactly as it is, centered below the text */
+main #enquiryForm {
+    width: 100% !important;
+    max-width: 450px !important;       /* Maintains your form box width */
+    margin: 0 auto !important;
+}
+/* --- SECTION 5: INTERACTIVE MAP CONTAINER STYLING --- */
+#bakeryMap {
+    width: 100%;
+    max-width: 800px;  /* Professional wide layout box matching standard grids */
+    height: 400px;     /* Comfortable viewport height frame */
+    margin: 20px auto;
+    border: 3px solid #C4BEA5;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    z-index: 1;        /* Keeps the zoom layers underneath any overlay dropdown menus */
+}
+/* --- CONTACT PAGE HEADER FIX (Links to top-right) --- */
+.contact-header nav {
+    display: flex !important;
+    justify-content: space-between !important; /* Logo left, nav links right */
+    align-items: center !important;            /* Vertical alignment */
+    width: 100% !important;
+    padding: 15px 40px !important;
+    box-sizing: border-box !important;
+}
+
+.contact-header nav ul {
+    display: flex !important;                  /* Side-by-side arrangement */
+    list-style-type: none !important;          /* No bullets */
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: none !important;                      /* Clean spacing */
+}
+
+.contact-header nav ul li a {
+    text-decoration: none !important;
+    color: #3E2723 !important;                 /* Deep chocolate brown */
+    font-weight: bold !important;
+    font-size: 1rem !important;
+}
+
+.contact-header nav ul li a:hover,
+.contact-header nav ul li a.active {
+    color: #B55D3A !important;                 /* Terracotta hover */
+}
+
+/* --- ULTIMATE PRODUCTS NAV LAYOUT FIX --- */
+
+/* 1. Target the header container directly and force it to layout as a row */
+header.products-header {
+    display: flex !important;
+    flex-direction: row !important;      /* Forces side-by-side layout */
+    justify-content: space-between !important; /* Title on left, nav links on top right */
+    align-items: center !important;       /* Aligns them perfectly on the same vertical line */
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 20px 5% !important;          /* Gives clean spacing from the screen edges */
+    box-sizing: border-box !important;
+    background-color: #FDF5E6 !important; /* Cream header bar background */
+}
+
+/* 2. Target the h1 title specifically inside this header to keep it on the left */
+header.products-header h1 {
+    margin: 0 !important;
+    font-size: 1.8rem !important;
+    color: #3E2723 !important;            /* Deep chocolate brown */
+}
+
+/* 3. Target the nav element to pull it to the right side */
+header.products-header nav {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* 4. Force the list items to arrange horizontally inline on the right */
+header.products-header nav ul {
+    display: flex !important;             /* Arranges the menu options horizontally */
+    flex-direction: row !important;
+    list-style-type: none !important;     /* Removes standard bullet points */
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: none !important;                 /* Clean spacing between menu links */
+}
+
+/* 5. Clean link item text styles */
+header.products-header nav ul li a {
+    text-decoration: none !important;
+    color: #3E2723 !important;
+    font-weight: bold !important;
+    font-size: 1rem !important;
+}
+
+header.products-header nav ul li a:hover,
+header.products-header nav ul li a.active {
+    color: #B55D3A !important;            /* Terracotta hover link tone */
+}
+/* --- LIGHTBOX MODAL CORE ENGINE LAYOUT --- */
+.lightbox {
+    display: none;       /* Hidden by default until JavaScript flips it to flex */
+    position: fixed !important;
+    z-index: 99999 !important; /* Floats safely over absolutely everything */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(62, 39, 35, 0.95) !important; /* Dark chocolate tint overlay */
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Lightbox pop-up window styling card box */
+.lightbox-content-box {
+    background-color: #FDF5E6 !important; /* Clean soft background cream */
+    max-width: 550px;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.lightbox-content-box img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+#lightboxCaption {
+    padding: 20px;
+    margin: 0;
+    color: #3E2723;
+    font-weight: bold;
+    font-size: 1.05rem;
+    line-height: 1.4;
+}
+
+/* X Close Button layout links setup */
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #FDF5E6;
+    font-size: 45px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+}
+
+.lightbox-close:hover {
+    color: #B55D3A;
+}
